@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Plus+Jakarta+Sans:wght@400;600&family=Rubik:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Libre Baskerville", serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: "Rubik", sans-serif;
+    min-width: 0;
+}
+
+body {
+    background-color: #000080;
+}
+
+nav {
+    height: 100px;
+    background: #000080;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc((100vw - 1000px) / 2);
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 0 1.5 rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    border-bottom: 1px solid #000080; /* Thin invisible underline */
+}
+
+nav a:hover {
+    border-bottom-color: white; /* make underline visible on hover */
+}
+
+.hero {
+    background: #000080;
+    color: white;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    padding: 5rem calc((100vw - 1000px) / 2);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+
+.items-center {
+    align-items: center;
+}
+
+.hero-statement {
+    font-size: clamp(24px, 5vw, 56px);
+    padding-right: clamp(64px, 5vw, 96px); /* Responsive padding-right */
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.bold {
+    font-weight: bold;
+    font-weight: 900;
+}
+
+.hero-image {
+    max-width: 100%; /* Ensure it doesn't overflow the grid cell */
+    height: auto;
+    border-radius: 4%;
+    box-shadow: 24px 24px black;
+    margin-right: 24px;
+}
+
+button {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    padding: 1rem 2rem;
+    border: none;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #000080;
+    letter-spacing: 0.5px;
+}
+
+.contact-col {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.contact-col a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #fff; /* Border applied to the span */
+}
+
+/* PRODUCT */
+
+.catalogue-header {
+    text-align: center;
+    font-size: clamp(24px, 5vw, 56px);
+    padding-right: 0px;
+    padding-bottom: 16px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #000080;
+}
+
+.catalogue {
+    background-color: #fff;
+}
+
+.catalogue-container {
+    padding: 5rem calc((100vw - 1000px) / 2);
+}
+
+.product-gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.product-gallery img{
+    max-width: 200px;
+    width: 20vw; /* Adjust this value as needed */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+
+
+@media screen and (max-width: 1080px) {
+    nav {
+        padding: 0 16px;
+    }
+
+    .catalogue-container{
+        padding: 0 16px;
+
+    }
+
+    .hero-statement {
+        padding-left: 16px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .flex-container {
+        flex-direction: column; /* Example: Change direction to column */
+        /* font-size: 1rem; Example: Decrease font size */
+        padding: 0 16px;
+    }
+
+    .hero-container {
+        display: flex;
+        padding: 1rem calc((100vw - 1000px) / 2);
+    }
+
+    .hero-statement {
+        font-size: clamp(24px, 5vw, 56px);
+        padding-right: 0px;
+        padding-bottom: 16px;
+        padding-left: 0px;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+
+    .hero-image {
+        max-width: 96%;
+        box-shadow: 16px 16px black;
+        margin-right: 16px;
+    }
+
+    .contact-col {
+        display: flex;
+        flex-direction: column;
+        padding: 16px 0;
+        align-items: start;
+    }
+}
+
+
+
+footer {
+    background-color: #000080; /* Matching the body's background color */
+    color: white; /* Ensuring text is visible on the dark background */
+    height: 100px;
+    padding: 20px 0; /* Adding some padding for spacing */
+    text-align: center; /* Center-aligning the text */
+    font-family: "Plus Jakarta Sans", sans-serif; /* Using the sans-serif font for the footer */
+}
+
+.footer-content {
+    margin-bottom: 20px; /* Spacing between content and footer bottom */
+}
+
+.footer-section.links ul {
+    list-style-type: none; /* Removing bullet points as requested */
+    padding: 0; /* Removing default padding */
+}
+
+.footer-section.links li {
+    display: inline; /* Displaying links inline */
+    margin-right: 20px; /* Spacing between the links */
+}
+
+.footer-section.links a {
+    color: white; /* Setting link color */
+    text-decoration: none; /* Removing underline from links */
+    font-weight: 400; /* Font weight as per your style */
+}
+
+.footer-section.links a:hover {
+    text-decoration: underline; /* Underline on hover for better user experience */
+}
+
+.footer-bottom {
+    font-size: 0.8rem; /* Adjust the font size as per your design */
+    font-family: "Libre Baskerville", serif; /* A different font for the copyright text */
+}
+
+/* Media queries for responsiveness, if needed */
+@media (max-width: 768px) {
+    .footer-section.links li {
+        display: block; /* Stack the links vertically on smaller screens */
+        margin-bottom: 10px; /* Add some spacing between stacked links */
+    }
+}

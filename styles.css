@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Plus+Jakarta+Sans:wght@400;600&family=Rubik:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -46,7 +47,8 @@ nav a:hover {
 .hero-container {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    background-color: #000080;
+    height: 100vh;
     padding: 5rem calc((100vw - 1000px) / 2);
 }
 
@@ -127,6 +129,10 @@ button {
 }
 
 .catalogue-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100vh;
     padding: 5rem calc((100vw - 1000px) / 2);
 }
 
@@ -147,18 +153,20 @@ button {
 
 
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1000px) {
     nav {
         padding: 0 16px;
     }
 
     .catalogue-container{
-        padding: 0 16px;
+        padding: 5em 16px;
 
     }
 
-    .hero-statement {
-        padding-left: 16px;
+    .hero-container {
+        padding-left: 16px;  
+        padding-right: 16px;  
+        height: 100vw;
     }
 
 }
@@ -167,13 +175,14 @@ button {
 
     .flex-container {
         flex-direction: column; /* Example: Change direction to column */
-        /* font-size: 1rem; Example: Decrease font size */
         padding: 0 16px;
     }
 
     .hero-container {
         display: flex;
-        padding: 1rem calc((100vw - 1000px) / 2);
+        padding: 5rem calc((100vw - 1000px) / 2);
+        height: 100vh;
+
     }
 
     .hero-statement {
@@ -204,7 +213,6 @@ button {
 footer {
     background-color: #000080; /* Matching the body's background color */
     color: white; /* Ensuring text is visible on the dark background */
-    height: 100px;
     padding: 20px 0; /* Adding some padding for spacing */
     text-align: center; /* Center-aligning the text */
     font-family: "Plus Jakarta Sans", sans-serif; /* Using the sans-serif font for the footer */
@@ -243,6 +251,6 @@ footer {
 @media (max-width: 768px) {
     .footer-section.links li {
         display: block; /* Stack the links vertically on smaller screens */
-        margin-bottom: 10px; /* Add some spacing between stacked links */
+        /* margin-bottom: 10px; /* Add some spacing between stacked links */
     }
 }

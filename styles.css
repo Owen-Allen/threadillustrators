@@ -12,7 +12,14 @@
 
 body {
     background-color: #000080;
-}
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+
+    .content-wrapper {
+        flex: 1;  /* Takes up all available space */
+    }
 
 nav {
     height: 100px;
@@ -48,7 +55,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     background-color: #000080;
-    height: 100vh;
+    min-height: 100vh;
     padding: 5rem calc((100vw - 1000px) / 2);
 }
 
@@ -60,7 +67,6 @@ nav a:hover {
     font-size: 1.5rem;
     line-height: 1.5;
 }
-
 
 .items-center {
     align-items: center;
@@ -81,7 +87,7 @@ nav a:hover {
 .hero-image {
     max-width: 100%; /* Ensure it doesn't overflow the grid cell */
     height: auto;
-    border-radius: 4%;
+    border-radius: 16px ;
     box-shadow: 24px 24px black;
     margin-right: 24px;
 }
@@ -107,9 +113,13 @@ button {
 
 .contact-col a {
     color: white;
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     text-decoration: none;
-    border-bottom: 1px solid #fff; /* Border applied to the span */
+    border-bottom: 1px solid #000080; /* Thin invisible underline */
+}
+
+.contact-col a:hover {
+    border-bottom: 1px solid #fff;
 }
 
 /* PRODUCT */
@@ -132,7 +142,7 @@ button {
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    height: 100vh;
+    min-height: 100vh;
     padding: 5rem calc((100vw - 1000px) / 2);
 }
 
@@ -166,7 +176,7 @@ button {
     .hero-container {
         padding-left: 16px;  
         padding-right: 16px;  
-        height: 100vw;
+        min-height: 100vw;
     }
 
 }
@@ -181,7 +191,7 @@ button {
     .hero-container {
         display: flex;
         padding: 5rem calc((100vw - 1000px) / 2);
-        height: 100vh;
+        min-height: 100vh;
 
     }
 
@@ -253,4 +263,56 @@ footer {
         display: block; /* Stack the links vertically on smaller screens */
         /* margin-bottom: 10px; /* Add some spacing between stacked links */
     }
+}
+
+
+.contact {
+    background: #000080;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Adjust the height as needed */
+}
+/*  CONTACT PAGE */
+.contact-form-container {
+    background-color: #fff; /* or any color you prefer */
+    padding: 20px;
+    max-width: 500px;
+    width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    color: #000080;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.button-blue { 
+    color: #fff;
+    background-color: #000080;
 }

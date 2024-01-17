@@ -32,7 +32,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     color: #ffffff;
     padding: 0 1.5 rem;
     text-transform: uppercase;
@@ -88,8 +88,14 @@ nav a:hover {
     max-width: 100%; /* Ensure it doesn't overflow the grid cell */
     height: auto;
     border-radius: 16px ;
-    box-shadow: 24px 24px black;
-    margin-right: 24px;
+}
+
+.big-shadow {
+    box-shadow: 0 8px 8px -2px black;
+}
+
+.small-shadow{
+    box-shadow: 0 2px 8px -2px black;
 }
 
 button {
@@ -106,6 +112,7 @@ button {
 }
 
 .contact-col {
+    font-weight: 300;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -156,7 +163,7 @@ button {
 }
 
 .product-gallery img{
-    max-width: 200px;
+    max-width: 220px;
     width: 20vw; /* Adjust this value as needed */
     height: auto; /* Maintain the aspect ratio */
 }
@@ -201,12 +208,6 @@ button {
         padding-left: 0px;
         font-weight: 300;
         line-height: 1.2;
-    }
-
-    .hero-image {
-        max-width: 96%;
-        box-shadow: 16px 16px black;
-        margin-right: 16px;
     }
 
     .contact-col {

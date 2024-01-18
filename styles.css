@@ -21,6 +21,16 @@ body {
     flex: 1;  /* Takes up all available space */
 }
 
+.fill-space {
+    flex: 1;  /* Takes up all available space */
+}
+@media screen and (max-width: 600px) {
+    .fill-space {
+        flex: none;
+    }
+}
+
+
 nav {
     height: 100px;
     background: #000080;
@@ -34,7 +44,6 @@ nav a {
     text-decoration: none;
     font-size: clamp(16px, 2vw, 20px);
     color: #ffffff;
-    padding: 0 1.5 rem;
     text-transform: uppercase;
     font-style: normal;
     font-weight: 400;
@@ -55,7 +64,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     background-color: #000080;
-    min-height: 100vh;
+    min-height: calc(100vh - 100px); /* -100px to account for navbar height*/
     padding: 5rem calc((100vw - 1000px) / 2);
 }
 
@@ -63,7 +72,6 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 2rem;
     font-size: 1.5rem;
     line-height: 1.5;
 }
@@ -176,11 +184,9 @@ button {
 
     .catalogue-container{
         padding: 5em 16px;
-
     }
 
     .hero-container {
-
         padding: 5rem 1rem;
         /* padding: 1rem calc((100vw - 1000px) / 2); */
         min-height: calc(100vh - 100px);

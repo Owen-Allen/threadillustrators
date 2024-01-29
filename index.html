@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <title>Thread Illustrators</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +17,11 @@
 
 <body>
     <nav>
-        <a href="/">Thread Illustrators</a>
-        <a href="/contact">Contact</a>
+        <div class="name-icon-container"><img style="border-radius: 50%; width: 48px; height: auto"
+                src="./needle_icon.png" alt="">
+            <a class=".hover-underline" href="/"> Thread Illustrators</a>
+        </div>
+        <!-- <a class=".hover-underline" href="/contact">Contact</a> -->
     </nav>
 
     <section class="hero">
@@ -28,30 +32,63 @@
                 <img class="hero-image big-shadow" src="./public/tshirt-2.png" alt="t-shirt">
             </div>
             <br>
-            
+
             <div class="flex-container">
-                <button class="button small-shadow" onClick="location.href = '/contact';">CONTACT US</button>
+                <a id="contact-button" href="mailto:sales@threadillustrators.com" class="button small-shadow">CONTACT
+                    US</a>
                 <div class="contact-col">
-                    <a href="mailto:sales@threadillustrators.com"><span>sales@threadillustrators.com</span></a>
-                    <a href="https://maps.app.goo.gl/CPVAtDHgXiSPFrT56"><span>83 Iber Road, Stittsville, Ontario</span></a>
+                    <a href="https://maps.app.goo.gl/CPVAtDHgXiSPFrT56"><span>83 Iber Road, Stittsville,<br /> Ontario,
+                            K2S 1E7</span></a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="catalogue">
-        <div class="catalogue-container">
-            <h1 class="catalogue-header">Product Catalogue</h1>
-            <div class="product-gallery">
-                <a href="https://www.sanmarcanada.com/"><img src="./public/logos/SanMarLogo_1.png" alt="SanMar Icon"></a>
-                <a href="https://www.alphabroder.ca"><img src="./public/logos/ab_newlogo.png" alt="ab_newlogo Icon"></a>
-                <a href="https://www.ajmintl.com"><img src="./public/logos/ajm_logo.png" alt="ajm_logo Icon"></a>
-                <a href="https://www.canadasportswear.com"><img src="./public/logos/canada_sportswear.png" alt="canada_sportswear Icon"></a>
-                <a href="https://en-ca.ssactivewear.com/"><img src="./public/logos/sns.png" alt="sns Icon"></a>
-                <a href="https://www.stormtech.ca"><img src="./public/logos/stormtech.png" alt="stormtech Icon"></a>
-                <a href="https://www.trimarksportswear.com"><img src="./public/logos/trimark.png" alt="trimark Icon"></a>
-            </div>
+    <section class="about-and-catalogue">
+        <div class="about-container">
+            <h2 class="catalogue-header" style="margin-bottom: 20px;">About us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus error, veniam, ducimus mollitia
+                consequatur, quos sit sunt obcaecati dolores blanditiis consectetur possimus.
+                <br />
+                <br />
+
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam explicabo illo at quae eius voluptatem reiciendis voluptates obcaecati? Ullam eaque ex deleniti? Maiores accusamus distinctio quo neque, aut in corrupti.
+                <br />
+                <br />
+                <a href="mailto:sales@threadillustrators.com"><span>sales@threadillustrators.com</span></a>
+            </p>
         </div>
+
+        <div class="catalogue-section">
+            <h3 class="catalogue-header" style="margin-bottom: 20px;">Product Catalogues</h3>
+            <ul class="catalogue-list">
+                <li><a href="https://www.alphabroder.ca"> <img src="./public/logos/ab_newlogo.png"
+                            alt="ab_newlogo Icon">Alphabroder</a></li>
+                <li><a href="https://www.sanmarcanada.com/"> <img src="./public/logos/SanMarLogo_1.png"
+                            alt="SanMar Icon">SanMar Canada</a></li>
+                <li><a href="https://www.ajmintl.com"> <img src="./public/logos/ajm_logo.png" alt="ajm_logo Icon">AJM
+                        International</a></li>
+                <li><a href="https://www.canadasportswear.com"> <img src="./public/logos/canada_sportswear.png"
+                            alt="canada_sportswear Icon">Canada Sportswear</a></li>
+                <li><a href="https://en-ca.ssactivewear.com/"> <img src="./public/logos/sns.png" alt="sns Icon">S&S
+                        Canada</a></li>
+                <li><a href="https://www.stormtech.ca"> <img src="./public/logos/stormtech.png"
+                            alt="stormtech Icon">Stormtech</a></li>
+                <li><a href="https://www.trimarksportswear.com"><img src="./public/logos/trimark.png"
+                            alt="trimark Icon">Trimark</a></li>
+                <li><a href="https://www.athleticknit.com/"> <img src="./public/logos/bernard_athletic.png">Athletic
+                        Knit</a></li>
+                <li><a href="https://kobesportswear.com/"> <img
+                            src="./public/logos/kobe_sportswear_logo_header_m.png">Kobe Sportswear</a></li>
+                <li><a href="https://knpheadwear.com/"> <img src="./public/logos/KNP-site-icon_a.jpg">KNP Headwear</a>
+                </li>
+                <li><a href="https://www.fersten.com/"> <img src="./public/logos/fersten-worldwide-logo.svg">Fersten
+                        Worldwide</a></li>
+            </ul>
+        </div>
+
     </section>
+
+
 </body>
 
 
@@ -74,6 +111,6 @@
     </div>
 </footer>
 
- 
+
 
 </html>

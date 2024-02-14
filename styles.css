@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Plus+Jakarta+Sans:wght@400;600&family=Rubik:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* font-family: "Times New Roman", Times, serif; */
-    font-family: "Libre Baskerville", serif;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", sans-serif; 
     min-width: 0;
 }
 
 body {
-    background-color: #000080;
+    background-color: #3e4090;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -22,57 +22,40 @@ body {
     flex: 1;  /* Takes up all available space */
 }
 
-.fill-space {
-    flex: 1;  /* Takes up all available space */
-}
+
+
 @media screen and (max-width: 600px) {
     .fill-space {
         flex: none;
     }
 }
 
-
 nav {
-    height: 100px;
-    background:  #000080;
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    padding: 0 calc((100vw - 1000px) / 2);
-}
-
-nav .name-icon-container{
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    align-items: center; 
+    background-color: white; /* Sets the background color to white */
+    /* text-align: center; Centers the content (the image) horizontally */
+    display: block; /* Ensures the nav is a block-level element, allowing it to take the full width */
+    padding: 12px calc((100vw - 1000px) / 2);
 }
 
 nav a {
-    text-decoration: none;
-    font-size: clamp(16px, 2vw, 20px);
-    color: #ffffff;
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    border-bottom: 1px solid #000080;
+    display: inline-block; /* Makes the link (therefore the image) centered as per the text-align of the parent */
+    text-decoration: none; /* Optional: Removes the underline from the link */
 }
 
-
-nav a:hover {
-    border-bottom-color: white;
+nav img {
+    height: 76px;
+    width: auto;
 }
 
 .hero {
-    background: #000080;
+    background: #3e4090;
     color: white;
 }
 
 .hero-container {
     display: flex;
     flex-direction: column;
-    background-color: #000080;
+    background-color: #3e4090;
     min-height: calc(100vh - 100px); /* -100px to account for navbar height*/
     padding: 5rem calc((100vw - 1000px) / 2);
 }
@@ -89,6 +72,10 @@ nav a:hover {
     align-items: center;
 }
 
+.fill-space {
+    flex: 1;  /* Takes up all available space */
+}
+
 .hero-statement {
     font-size: clamp(24px, 5vw, 56px);
     padding-right: clamp(64px, 5vw, 96px); /* Responsive padding-right */
@@ -98,7 +85,7 @@ nav a:hover {
 
 .bold {
     font-weight: bold;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .hero-image {
@@ -124,11 +111,15 @@ nav a:hover {
     background: white;
     cursor: pointer;
     border-radius: 4px;
-    color: #000080;
+    color: #3e4090;
     letter-spacing: 0.5px;
     text-decoration: none;
     display: inline-block;
     text-align: center;
+}
+
+.small-shadow{
+    box-shadow: 0 2px 8px -2px black;
 }
 
 .contact-col {
@@ -142,7 +133,7 @@ nav a:hover {
     color: white;
     font-size: clamp(16px, 2vw, 20px);
     text-decoration: none;
-    border-bottom: 1px solid #000080; /* Thin invisible underline */
+    border-bottom: 1px solid #3e4090; /* Thin invisible underline */
 }
 
 .contact-col a:hover {
@@ -151,43 +142,12 @@ nav a:hover {
 
 /* ABOUT AND CATALOGUE */
 
-.about-and-catalogue {
+.catalogue-section {
     background-color: #fff;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     min-height: 100vh;
     padding: 5em calc((100vw - 1000px) / 2);
-}
-
-@media screen and (max-width: 600px) {
-    .about-and-catalogue {
-        flex-direction: column;
-    }
-
-}
-
-
-.about-container{
-    flex: 1;
-}
-
-.about-container p{
-    padding: 24px;
-}
-
-.about-and-catalogue-header {
-    text-align: center;
-    font-size: clamp(24px, 5vw, 48px);
-    padding-bottom: 16px;
-    font-weight: 300;
-    line-height: 1.2;
-    color: #000080;
-}
-
-.catalogue-section {
-    text-align: center; /* Aligns content in the center */
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 .catalogue-header {
@@ -195,55 +155,76 @@ nav a:hover {
     font-size: clamp(16px, 5vw, 32px);
     font-weight: 300;
     line-height: 1.2;
-    color: #000080;
+    padding-bottom: 20px;
+    color: #3e4090;
 }
 
 .catalogue-list {
     list-style-type: none; /* Removes default bullets */
     padding: 0; /* Removes default padding */
-    /* width: 60%; Sets a specific width for the list */
     display: inline-block;
     margin: auto; /* Centers the list within its container */
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+@media screen and (max-width: 1000px) {
+    .catalogue-list {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+      }
+
+      .catalogue-list li:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+
+    
 }
 
 .catalogue-list li {
     display: flex;
     /* align-items: center; */
-    margin-bottom: 8px;
     border-bottom: 1px solid #ccc; /* Separator line */
-    padding-bottom: 8px;
+    padding-bottom: 4px;
+    padding-top: 4px;
     /* padding left and right stretches the separator line */
     padding-left: 16px;
     padding-right: 16px;
+    
 
 }
+
 
 .catalogue-list li:last-child {
     border-bottom: none; 
 }
 
 .catalogue-list img {
-    width: 48px;
     height: auto;
-    object-fit: contain; /* ensures image scales properly */
+    object-fit: contain; 
     object-position: center; /* center the image */
     margin-right: 24px;
-    /* margin-right:/ auto; gap between logo and text */
+    float: left;
+    width:  96px;
+    height: 96px;
+    object-fit: contain;
 }
 
+
+
 .catalogue-list li a {
-    /* align content so that the image and text are relatively centered to eachother */
     display: flex;
     justify-content: center;
     align-items: center; 
     text-decoration: none;
     color: inherit;
-    /* width: 100%; */
 }
 
 @media screen and (max-width: 1000px) {
     nav {
-        padding: 0 16px;
+        padding: 12px 16px;
     }
 
     .hero-container {
@@ -253,6 +234,12 @@ nav a:hover {
 }
 
 @media screen and (max-width: 600px) {
+
+    nav {
+        display: flex;
+        justify-content: center;
+        padding: 16 16px;
+    }
 
     .flex-container {
         flex-direction: column; /* Example: Change direction to column */
@@ -264,8 +251,7 @@ nav a:hover {
         padding: 2.5rem calc((100vw - 1000px) / 2);
     }
 
-    .about-and-catalogue {
-
+    .catalogue-section {
         padding: 2.5rem calc((100vw - 1000px) / 2);
     }
 
@@ -289,114 +275,19 @@ nav a:hover {
 
 
 
-
-
-
 footer {
-    background-color: #000080; /* Matching the body's background color */
+    background-color: #3e4090; /* Matching the body's background color */
     color: white; /* Ensuring text is visible on the dark background */
     padding: 20px 0; /* Adding some padding for spacing */
     text-align: center; /* Center-aligning the text */
     font-family: "Plus Jakarta Sans", sans-serif; /* Using the sans-serif font for the footer */
 }
 
-.footer-content {
-    margin-bottom: 20px; /* Spacing between content and footer bottom */
-}
-
-.footer-section.links ul {
-    list-style-type: none; /* Removing bullet points as requested */
-    padding: 0; /* Removing default padding */
-}
-
-.footer-section.links li {
-    display: inline; /* Displaying links inline */
-    margin-right: 20px; /* Spacing between the links */
-}
-
-.footer-section.links a {
-    color: white; /* Setting link color */
-    text-decoration: none; /* Removing underline from links */
-    font-weight: 400; /* Font weight as per your style */
-}
-
-.footer-section.links a:hover {
-    text-decoration: underline; /* Underline on hover for better user experience */
-}
-
-.footer-bottom {
+.footer-text {
     font-size: 0.8rem; /* Adjust the font size as per your design */
     font-family: "Libre Baskerville", serif; /* A different font for the copyright text */
 }
 
-/* Media queries for responsiveness, if needed */
-@media (max-width: 768px) {
-    .footer-section.links li {
-        display: block; /* Stack the links vertically on smaller screens */
-        /* margin-bottom: 10px; /* Add some spacing between stacked links */
-    }
-}
 
 
-.contact {
-    background: #000080;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh; /* Adjust the height as needed */
-}
-/*  CONTACT PAGE */
-.contact-form-container {
-    background-color: #fff; /* or any color you prefer */
-    padding: 20px;
-    max-width: 500px;
-    width: 500px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.contact-form-container h2 {
-    text-align: center;
-    color: #000080;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.form-group textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-.button-blue { 
-    color: #fff;
-    background-color: #000080;
-}
-
-
-.hidden-label{
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
-}

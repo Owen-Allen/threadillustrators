@@ -90,8 +90,11 @@ nav img {
 
 .hero-image {
     max-width: 100%; /* Ensure it doesn't overflow the grid cell */
+    width: 1200px;
     height: auto;
-    border-radius: 2px ;
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 24px 24px;
 }
 
 .big-shadow {
